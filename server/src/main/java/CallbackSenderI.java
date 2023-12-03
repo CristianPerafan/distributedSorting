@@ -1,4 +1,6 @@
 import Demo.CallbackReceiverPrx;
+import com.zeroc.Ice.Current;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -39,6 +41,12 @@ public final class CallbackSenderI implements Demo.CallbackSender
         }
 
     }
+
+    @Override
+    public void makeWorker(CallbackReceiverPrx proxy, String msg, Current current) {
+
+    }
+
 
     public String evaluateOrder(String msg,CallbackReceiverPrx proxy){
         String out = "";

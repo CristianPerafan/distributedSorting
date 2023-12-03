@@ -15,6 +15,7 @@ module Demo
 
     }
 
+
         interface CallbackReceiver
            {
                void receiveMessage(string msg);
@@ -22,8 +23,13 @@ module Demo
            interface CallbackSender
            {
                void sendMessage(CallbackReceiver* proxy,string msg);
+               void makeWorker(CallbackReceiver* proxy,string msg);
                void shutdown();
            }
+
+
+
+
 
 
 }

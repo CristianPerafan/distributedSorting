@@ -12,3 +12,11 @@ include ':server'
 project(':server').projectDir = new File("server")
 include ':client'
 project(':client').projectDir = new File("client")
+include ':master'
+project(':master').projectDir = new File("master")
+include ':worker'
+project(':worker').projectDir = new File("worker")
+
+
+
+

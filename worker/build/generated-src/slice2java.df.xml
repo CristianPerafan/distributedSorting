@@ -1,0 +1,19 @@
+<state>
+  <timestamp value='1701575867285' />
+  <sourceSet name='default'>
+    <source name='C:\Users\Cristian Perafan\IJ Projects\distributedSorting\Printer.ice'>
+      <file name='C:\Users\Cristian Perafan\IJ Projects\distributedSorting\worker\build\generated-src\Demo\RequestCanceledException.java' />
+      <file name='C:\Users\Cristian Perafan\IJ Projects\distributedSorting\worker\build\generated-src\Demo\Printer.java' />
+      <file name='C:\Users\Cristian Perafan\IJ Projects\distributedSorting\worker\build\generated-src\Demo\CallbackReceiver.java' />
+      <file name='C:\Users\Cristian Perafan\IJ Projects\distributedSorting\worker\build\generated-src\Demo\CallbackSender.java' />
+      <file name='C:\Users\Cristian Perafan\IJ Projects\distributedSorting\worker\build\generated-src\Demo\PrinterPrx.java' />
+      <file name='C:\Users\Cristian Perafan\IJ Projects\distributedSorting\worker\build\generated-src\Demo\_PrinterPrxI.java' />
+      <file name='C:\Users\Cristian Perafan\IJ Projects\distributedSorting\worker\build\generated-src\Demo\CallbackReceiverPrx.java' />
+      <file name='C:\Users\Cristian Perafan\IJ Projects\distributedSorting\worker\build\generated-src\Demo\_CallbackReceiverPrxI.java' />
+      <file name='C:\Users\Cristian Perafan\IJ Projects\distributedSorting\worker\build\generated-src\Demo\CallbackSenderPrx.java' />
+      <file name='C:\Users\Cristian Perafan\IJ Projects\distributedSorting\worker\build\generated-src\Demo\_CallbackSenderPrxI.java' />
+    </source>
+    <arg value='C:\Program Files\ZeroC\Ice-3.7.10\\bin\slice2java.exe' />
+    <arg value='-IC:\Program Files\ZeroC\Ice-3.7.10\\slice' />
+  </sourceSet>
+</state>
