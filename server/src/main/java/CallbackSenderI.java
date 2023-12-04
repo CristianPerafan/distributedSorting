@@ -23,6 +23,11 @@ public final class CallbackSenderI implements Demo.CallbackSender
     static MergeSort<ComparableClass> mergeSort = new MergeSort<ComparableClass>();
 
     @Override
+    public void initiateCallback(CallbackReceiverPrx proxy, String message, Current current) {
+
+    }
+
+    @Override
     public void sendMessage(CallbackReceiverPrx proxy, String msg,com.zeroc.Ice.Current current)
     {
 

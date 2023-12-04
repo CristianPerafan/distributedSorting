@@ -66,7 +66,7 @@ public class Worker
                 e.printStackTrace();
             }
 
-            String message = username + "-" + hostname + "-" + "register";
+            String message = username + "-" + hostname + "-" + "register as worker";
 
 
             try {
