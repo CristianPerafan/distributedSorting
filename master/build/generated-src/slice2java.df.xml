@@ -1,19 +1,19 @@
 <state>
-  <timestamp value='1701575866580' />
+  <timestamp value='1701658143436' />
   <sourceSet name='default'>
-    <source name='C:\Users\Cristian Perafan\IJ Projects\distributedSorting\Printer.ice'>
-      <file name='C:\Users\Cristian Perafan\IJ Projects\distributedSorting\master\build\generated-src\Demo\RequestCanceledException.java' />
-      <file name='C:\Users\Cristian Perafan\IJ Projects\distributedSorting\master\build\generated-src\Demo\Printer.java' />
-      <file name='C:\Users\Cristian Perafan\IJ Projects\distributedSorting\master\build\generated-src\Demo\CallbackReceiver.java' />
-      <file name='C:\Users\Cristian Perafan\IJ Projects\distributedSorting\master\build\generated-src\Demo\CallbackSender.java' />
-      <file name='C:\Users\Cristian Perafan\IJ Projects\distributedSorting\master\build\generated-src\Demo\PrinterPrx.java' />
-      <file name='C:\Users\Cristian Perafan\IJ Projects\distributedSorting\master\build\generated-src\Demo\_PrinterPrxI.java' />
-      <file name='C:\Users\Cristian Perafan\IJ Projects\distributedSorting\master\build\generated-src\Demo\CallbackReceiverPrx.java' />
-      <file name='C:\Users\Cristian Perafan\IJ Projects\distributedSorting\master\build\generated-src\Demo\_CallbackReceiverPrxI.java' />
-      <file name='C:\Users\Cristian Perafan\IJ Projects\distributedSorting\master\build\generated-src\Demo\CallbackSenderPrx.java' />
-      <file name='C:\Users\Cristian Perafan\IJ Projects\distributedSorting\master\build\generated-src\Demo\_CallbackSenderPrxI.java' />
+    <source name='/home/swarch/datamining/distributedSorting/Printer.ice'>
+      <file name='/home/swarch/datamining/distributedSorting/master/build/generated-src/Demo/RequestCanceledException.java' />
+      <file name='/home/swarch/datamining/distributedSorting/master/build/generated-src/Demo/Printer.java' />
+      <file name='/home/swarch/datamining/distributedSorting/master/build/generated-src/Demo/CallbackReceiver.java' />
+      <file name='/home/swarch/datamining/distributedSorting/master/build/generated-src/Demo/CallbackSender.java' />
+      <file name='/home/swarch/datamining/distributedSorting/master/build/generated-src/Demo/PrinterPrx.java' />
+      <file name='/home/swarch/datamining/distributedSorting/master/build/generated-src/Demo/_PrinterPrxI.java' />
+      <file name='/home/swarch/datamining/distributedSorting/master/build/generated-src/Demo/CallbackReceiverPrx.java' />
+      <file name='/home/swarch/datamining/distributedSorting/master/build/generated-src/Demo/_CallbackReceiverPrxI.java' />
+      <file name='/home/swarch/datamining/distributedSorting/master/build/generated-src/Demo/CallbackSenderPrx.java' />
+      <file name='/home/swarch/datamining/distributedSorting/master/build/generated-src/Demo/_CallbackSenderPrxI.java' />
     </source>
-    <arg value='C:\Program Files\ZeroC\Ice-3.7.10\\bin\slice2java.exe' />
-    <arg value='-IC:\Program Files\ZeroC\Ice-3.7.10\\slice' />
+    <arg value='/opt/Ice-3.7.6/bin/slice2java' />
+    <arg value='-I/opt/Ice-3.7.6/slice' />
   </sourceSet>
 </state>
