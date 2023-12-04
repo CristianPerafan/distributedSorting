@@ -22,7 +22,7 @@ Develop a distributed sorting application using Ice and Java. The application wi
 
 | Component| Remote PC Name |
 |----------|----------|
-|   Server   |   hgrid1   |
+|   Master   |   hgrid1   |
 |   Client   |   hgrid4   |
 |   Worker 1   |   hgrid10   |
 |   Worker 2  |   hgrid11   |
