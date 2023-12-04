@@ -8,8 +8,6 @@
  */
 
 rootProject.name = 'helloworld'
-include ':server'
-project(':server').projectDir = new File("server")
 include ':client'
 project(':client').projectDir = new File("client")
 include ':master'

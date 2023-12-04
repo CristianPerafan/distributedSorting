@@ -19,7 +19,7 @@ module Demo
         interface CallbackReceiver
            {
                void receiveMessage(string msg);
-               void startWorker(int from, int to);
+               void startWorker(int from, int to,string filename,string basepath);
                string getHalfAndRemove();
                int verifyLength();
            }

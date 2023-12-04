@@ -14,15 +14,18 @@ public class TaskManager implements Runnable {
 
     private String filename;
 
+    private String basePath;
     private Queue<Task> tasks = new LinkedList<>();
 
     private final Map<String, CallbackReceiverPrx> workers;
 
 
-    public TaskManager(CallbackReceiverPrx client, String filename, Map<String, CallbackReceiverPrx> workers) {
+    public TaskManager(CallbackReceiverPrx client, String filename, String basePath,Map<String, CallbackReceiverPrx> workers) {
         this.client = client;
         this.filename = filename;
+        this.basePath = basePath;
         this.workers = workers;
+
     }
 
     public void addTask(Task task) {
@@ -33,7 +36,8 @@ public class TaskManager implements Runnable {
     @Override
     public void run() {
 
-        long startTime = System.nanoTime();
+        long startTime = System.currentTimeMillis();
+
 
         List<CompletableFuture<Void>> futures = new ArrayList<>();
 
@@ -43,7 +47,7 @@ public class TaskManager implements Runnable {
 
             if (task != null) {
                 CompletableFuture<Void> future = CompletableFuture.runAsync(() -> {
-                    worker.startWorker(task.getFrom(), task.getTo());
+                    worker.startWorker(task.getFrom(), task.getTo(), filename, basePath);
                 });
 
                 futures.add(future);
@@ -62,7 +66,6 @@ public class TaskManager implements Runnable {
             areAllWorkersEmpty = true;
 
             for (Map.Entry<String, CallbackReceiverPrx> entry : workers.entrySet()) {
-                System.out.println("Getting half from " + entry.getKey());
 
                 String elements = entry.getValue().getHalfAndRemove();
 
@@ -74,7 +77,6 @@ public class TaskManager implements Runnable {
                 }
             }
 
-            System.out.println("All workers are empty: " + areAllWorkersEmpty);
 
             PriorityQueue<Pair<String, Container>> priorityQueue = new PriorityQueue<>(Comparator.comparing(Pair::getFirst));
 
@@ -107,25 +109,28 @@ public class TaskManager implements Runnable {
         } while (!areAllWorkersEmpty);
 
         System.out.println("All elements are sorted");
+
+        long endTime = System.currentTimeMillis();
+        long elapsedTime = endTime - startTime;
+
         try {
             saveSortedData(result.toString());
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
 
-        long endTime = System.nanoTime();
 
-        long durationInNano = (endTime - startTime);  
-        long durationInMillis = durationInNano / 1_000_000;  
 
-        System.out.println("Tiempo de ejecución en milisegundos: " + durationInMillis);
+        System.out.println("Sorting time of " +filename+": "+ elapsedTime + " milliseconds");
+
+        client.receiveMessage("Sorting time of " +filename+": "+ elapsedTime + " milliseconds");
 
     }
 
     private void saveSortedData(String result) throws IOException {
-        //File file = new File("C:/Users/Cristian Perafan/Desktop/sortedData.txt");
 
-        File file = new File("/home/swarch/datamining/sorted.dat.txt");
+        File file = new File(basePath+"sorted."+filename);
+
         if (!file.exists()) {
             file.createNewFile();
         }

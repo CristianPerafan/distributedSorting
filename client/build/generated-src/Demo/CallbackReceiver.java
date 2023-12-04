@@ -19,7 +19,7 @@ public interface CallbackReceiver extends com.zeroc.Ice.Object
 {
     void receiveMessage(String msg, com.zeroc.Ice.Current current);
 
-    void startWorker(int from, int to, com.zeroc.Ice.Current current);
+    void startWorker(int from, int to, String filename, String basepath, com.zeroc.Ice.Current current);
 
     String getHalfAndRemove(com.zeroc.Ice.Current current);
 
@@ -80,10 +80,14 @@ public interface CallbackReceiver extends com.zeroc.Ice.Object
         com.zeroc.Ice.InputStream istr = inS.startReadParams();
         int iceP_from;
         int iceP_to;
+        String iceP_filename;
+        String iceP_basepath;
         iceP_from = istr.readInt();
         iceP_to = istr.readInt();
+        iceP_filename = istr.readString();
+        iceP_basepath = istr.readString();
         inS.endReadParams();
-        obj.startWorker(iceP_from, iceP_to, current);
+        obj.startWorker(iceP_from, iceP_to, iceP_filename, iceP_basepath, current);
         return inS.setResult(inS.writeEmptyParams());
     }
 

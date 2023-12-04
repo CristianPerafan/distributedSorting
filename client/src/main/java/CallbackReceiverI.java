@@ -9,9 +9,11 @@ public class CallbackReceiverI implements Demo.CallbackReceiver{
     }
 
     @Override
-    public void startWorker(int from, int to, Current current) {
+    public void startWorker(int from, int to, String filename, String basepath, Current current) {
 
     }
+
+
 
     @Override
     public String getHalfAndRemove(Current current) {

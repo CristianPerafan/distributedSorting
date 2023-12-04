@@ -102,10 +102,13 @@ public class Client
     }
 
     public static void asyncTask(String msg, CallbackSenderPrx sender, CallbackReceiverPrx receiver) {
+        /*
         CompletableFuture.runAsync(() -> {
             sender.sendMessage(receiver, msg);
 
         });
+        */
+        sender.sendMessage(receiver, msg);
     }
 
 

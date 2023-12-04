@@ -13,7 +13,6 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/client" />
             <option value="$PROJECT_DIR$/master" />
-            <option value="$PROJECT_DIR$/server" />
             <option value="$PROJECT_DIR$/worker" />
           </set>
         </option>
