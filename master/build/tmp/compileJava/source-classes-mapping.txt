@@ -1,7 +1,7 @@
 Demo/_PrinterPrxI.java
  Demo._PrinterPrxI
-Container.java
- Container
+TaskManager.java
+ TaskManager
 Demo/RequestCanceledException.java
  Demo.RequestCanceledException
 Demo/CallbackSender.java
@@ -11,9 +11,8 @@ Demo/_CallbackReceiverPrxI.java
  Demo._CallbackReceiverPrxI
 Demo/CallbackReceiverPrx.java
  Demo.CallbackReceiverPrx
-Demo/CallbackReceiver.java
- Demo.CallbackReceiver
- Demo.CallbackReceiver$1
+CallbackSenderI.java
+ CallbackSenderI
 Task.java
  Task
 Demo/PrinterPrx.java
@@ -27,9 +26,14 @@ Pair.java
  Pair
 Demo/_CallbackSenderPrxI.java
  Demo._CallbackSenderPrxI
-TaskManager.java
- TaskManager
 Master.java
  Master
-CallbackSenderI.java
- CallbackSenderI
+ComparableClass.java
+ ComparableClass
+Demo/CallbackReceiver.java
+ Demo.CallbackReceiver
+ Demo.CallbackReceiver$1
+MergeSort.java
+ MergeSort
+Container.java
+ Container

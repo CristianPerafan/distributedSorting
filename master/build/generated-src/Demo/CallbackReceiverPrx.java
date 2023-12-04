@@ -53,40 +53,44 @@ public interface CallbackReceiverPrx extends com.zeroc.Ice.ObjectPrx
         return f;
     }
 
-    default void startWorker(int from, int to)
+    default void startWorker(int from, int to, String filename, String basepath)
     {
-        startWorker(from, to, com.zeroc.Ice.ObjectPrx.noExplicitContext);
+        startWorker(from, to, filename, basepath, com.zeroc.Ice.ObjectPrx.noExplicitContext);
     }
 
-    default void startWorker(int from, int to, java.util.Map<String, String> context)
+    default void startWorker(int from, int to, String filename, String basepath, java.util.Map<String, String> context)
     {
-        _iceI_startWorkerAsync(from, to, context, true).waitForResponse();
+        _iceI_startWorkerAsync(from, to, filename, basepath, context, true).waitForResponse();
     }
 
-    default java.util.concurrent.CompletableFuture<Void> startWorkerAsync(int from, int to)
+    default java.util.concurrent.CompletableFuture<Void> startWorkerAsync(int from, int to, String filename, String basepath)
     {
-        return _iceI_startWorkerAsync(from, to, com.zeroc.Ice.ObjectPrx.noExplicitContext, false);
+        return _iceI_startWorkerAsync(from, to, filename, basepath, com.zeroc.Ice.ObjectPrx.noExplicitContext, false);
     }
 
-    default java.util.concurrent.CompletableFuture<Void> startWorkerAsync(int from, int to, java.util.Map<String, String> context)
+    default java.util.concurrent.CompletableFuture<Void> startWorkerAsync(int from, int to, String filename, String basepath, java.util.Map<String, String> context)
     {
-        return _iceI_startWorkerAsync(from, to, context, false);
+        return _iceI_startWorkerAsync(from, to, filename, basepath, context, false);
     }
 
     /**
      * @hidden
      * @param iceP_from -
      * @param iceP_to -
+     * @param iceP_filename -
+     * @param iceP_basepath -
      * @param context -
      * @param sync -
      * @return -
      **/
-    default com.zeroc.IceInternal.OutgoingAsync<Void> _iceI_startWorkerAsync(int iceP_from, int iceP_to, java.util.Map<String, String> context, boolean sync)
+    default com.zeroc.IceInternal.OutgoingAsync<Void> _iceI_startWorkerAsync(int iceP_from, int iceP_to, String iceP_filename, String iceP_basepath, java.util.Map<String, String> context, boolean sync)
     {
         com.zeroc.IceInternal.OutgoingAsync<Void> f = new com.zeroc.IceInternal.OutgoingAsync<>(this, "startWorker", null, sync, null);
         f.invoke(false, context, null, ostr -> {
                      ostr.writeInt(iceP_from);
                      ostr.writeInt(iceP_to);
+                     ostr.writeString(iceP_filename);
+                     ostr.writeString(iceP_basepath);
                  }, null);
         return f;
     }

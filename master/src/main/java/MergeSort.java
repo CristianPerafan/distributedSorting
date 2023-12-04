@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class MergeSort <T extends Comparable<T>>{
+public class MergeSort<T extends Comparable<T>>{
 
     public List<T> mergeSort(List<T> list) {
         if (list.size() <= 1) {

@@ -13,23 +13,19 @@ public class CallbackReceiverI implements Demo.CallbackReceiver {
         System.out.println(msg);
     }
 
+    @Override
+    public void startWorker(int from, int to, String filename, String basepath, Current current) {
+        System.out.println("Starting worker from " + from + " to " + to);
+        readLinesFromFile(basepath+filename,from, to);
+    }
+
     private  MergeSort<ComparableClass> mergeSort = new MergeSort<ComparableClass>();
     private  List<ComparableClass>  sortedList;
 
 
     @Override
-    public void startWorker(int from, int to, Current current) {
-        System.out.println("Starting worker from " + from + " to " + to);
-
-        //readLinesFromFile("C:/Users/Cristian Perafan/Downloads/ejemplo.dat.txt", from, to);
-        readLinesFromFile("/home/swarch/datamining/ejemplo.dat.txt",from, to);
-    }
-
-
-
-    @Override
     public String getHalfAndRemove(Current current) {
-        int half = 50000;
+        int half = 40000;
         if(sortedList.size() < half){
 
             List<ComparableClass> halfList = sortedList.subList(0, sortedList.size());
